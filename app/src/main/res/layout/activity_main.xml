@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.eddievideoplay.MainActivity">
+
+  <include
+      android:id="@+id/titlebar"
+      layout="@layout/title_bar"/>
+
+
+  
+  <com.example.administrator.eddievideoplay.view.StateView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:state_current="content"
+      app:state_empty="@layout/stateview_empty_view"
+      app:state_error="@layout/stateview_error_net_view"
+      app:state_loading="@layout/stateview_loading_view"
+      android:id="@+id/mStateView"
+      android:layout_below="@+id/titlebar"
+      >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+  </com.example.administrator.eddievideoplay.view.StateView>
+
+
+  <Button
+      android:id="@+id/btn_top"
+      android:layout_width="35dp"
+      android:layout_height="35dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginBottom="30dp"
+      android:layout_marginRight="20dp"
+      android:background="@mipmap/to_top"
+      android:gravity="center"
+      android:visibility="gone" />
+
+
+
+</RelativeLayout>
+
