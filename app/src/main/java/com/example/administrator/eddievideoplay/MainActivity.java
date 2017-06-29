@@ -1,5 +1,6 @@
 package com.example.administrator.eddievideoplay;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
@@ -73,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.setOnItemClickListen(new MyAdapter.OnItemClickListen() {
             @Override
             public void OnItemClick(View v, int position) {
+                startActivity(new Intent(MainActivity.this,PlayActivity.class));
+
 
             }
         });
@@ -105,14 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 }, 3000);
             }
         });
-
-        mAdapter.setOnItemClickListen(new MyAdapter.OnItemClickListen() {
-            @Override
-            public void OnItemClick(View v, int position) {
-
-            }
-        });
-
     }
 
     @Override

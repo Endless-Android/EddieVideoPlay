@@ -1,13 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <include
         android:id="@+id/titlebar"
-        layout="@layout/title_bar" />
+        layout="@layout/title_bar"/>
+
+    <include
+        android:id="@+id/id_ViewLayout"
+        layout="@layout/activity_play_video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="简介"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#22000000"/>
 
 
+    <ScrollView
+        android:id="@+id/sl_DecLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/video_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:paddingTop="20dp"
+                android:text="视频名称"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/video_dec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="视频简介"/>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
